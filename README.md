@@ -2,7 +2,7 @@
 
 React project using create-react-app with firebase connection.
 
-Will use firebase authentication for users and firebase firestore as the apps database.
+Uses firebase authentication for user accounts/sessions and firebase firestore for the database.
 
 
 ### Setup
