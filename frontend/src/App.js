@@ -1,5 +1,8 @@
 import 'dotenv/config';
 import { initializeApp } from "firebase/app";
+import { getItems } from './firebase/getItems';
+import { getFirestore } from 'firebase/firestore/lite';
+import { useEffect } from'react'; 
 
 // Firebase config setup - secrets stored in env file
 const firebaseConfig = {
@@ -11,10 +14,18 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FB_appID,
 };
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const firebase_app = initializeApp(firebaseConfig);
+export const db = getFirestore(firebase_app);
+
+
 
 
 function App() {
+
+  useEffect(()=> {
+    getItems(db);
+  }, [])
+
   return (
     <h2>Hello</h2>
   );
