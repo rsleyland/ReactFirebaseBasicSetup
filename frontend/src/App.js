@@ -1,8 +1,8 @@
-import 'dotenv/config';
 import { initializeApp } from "firebase/app";
-import { getItems } from './firebase/getItems';
 import { getFirestore } from 'firebase/firestore/lite';
-import { useEffect } from'react'; 
+import { LoginScreen } from "./screens/auth/Login.screen";
+import { RegisterScreen } from "./screens/auth/Register.screen";
+import { Routes, Route } from 'react-router-dom';
 
 // Firebase config setup - secrets stored in env file
 const firebaseConfig = {
@@ -22,12 +22,12 @@ export const db = getFirestore(firebase_app);
 
 function App() {
 
-  useEffect(()=> {
-    getItems(db);
-  }, [])
-
   return (
-    <h2>Hello</h2>
+    <Routes>
+      <Route path='login' element={<LoginScreen/>} />
+      <Route path='register' element={<RegisterScreen/>} />
+    </Routes>
+    
   );
 }
 
