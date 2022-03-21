@@ -5,7 +5,7 @@ export const loginUser = async (email, password) => {
     const auth = getAuth();
     const user = await signInWithEmailAndPassword(auth, email, password);
     if (user) {
-      console.log(user.user)
+      return true;
     }
   } catch (error) {
     console.error(error);

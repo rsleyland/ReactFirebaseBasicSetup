@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import { loginUser } from '../../firebase/auth/login-user';
+import { useNavigate } from 'react-router-dom';
 
 
 export const LoginScreen = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
-        loginUser(email, password);
+        if (await loginUser(email, password)) navigate('/profile');
     };
 
     return (
