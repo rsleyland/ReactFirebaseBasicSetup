@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { loginUser } from '../../firebase/login-user';
+import { loginUser } from '../../firebase/auth/login-user';
 
 
 export const LoginScreen = () => {

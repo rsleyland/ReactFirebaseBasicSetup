@@ -5,6 +5,7 @@ export const logout = async () => {
         const auth = getAuth();
         await signOut(auth);
         console.log("Signed out");
+        return true;
     } catch (error) {
         console.error(error);
     }

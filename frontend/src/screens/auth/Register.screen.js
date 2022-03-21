@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createNewUser } from '../../firebase/create-new-user';
+import { createNewUser } from '../../firebase/auth/create-new-user';
 
 
 export const RegisterScreen = () => {
