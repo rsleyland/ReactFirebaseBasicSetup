@@ -8,7 +8,7 @@ Uses firebase authentication for user accounts/sessions and firebase firestore f
 ### Setup
 `git clone git@github.com:rsleyland/ReactFirebaseBasicSetup.git`
 
-`cd ReactFirebaseBasicSetup`
+`cd ReactFirebaseBasicSetup/frontend`
 
 `npm install`
 
