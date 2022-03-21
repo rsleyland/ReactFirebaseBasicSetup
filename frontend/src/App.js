@@ -2,6 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore/lite';
 import { LoginScreen } from "./screens/auth/Login.screen";
 import { RegisterScreen } from "./screens/auth/Register.screen";
+import { LogoutScreen } from "./screens/auth/Logout.screen";
 import { Routes, Route } from 'react-router-dom';
 
 // Firebase config setup - secrets stored in env file
@@ -25,6 +26,7 @@ function App() {
   return (
     <Routes>
       <Route path='login' element={<LoginScreen/>} />
+      <Route path='logout' element={<LogoutScreen/>} />
       <Route path='register' element={<RegisterScreen/>} />
     </Routes>
     
