@@ -1,11 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore/lite';
+import { getFirestore } from 'firebase/firestore';
 import { LoginScreen } from "./screens/auth/Login.screen";
 import { RegisterScreen } from "./screens/auth/Register.screen";
 import { LogoutScreen } from "./screens/auth/Logout.screen";
 import { ProfileScreen } from "./screens/Profile.screen";
 import { Routes, Route } from 'react-router-dom';
-import { AuthContextProvider } from "./firebase/auth/AuthContextProvider";
+import { AuthContextProvider } from "./components/auth/AuthContextProvider";
 
 // Firebase config setup - secrets stored in env file
 const firebaseConfig = {

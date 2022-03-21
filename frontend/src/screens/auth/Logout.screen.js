@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { logout } from '../../firebase/auth/logout';
+import { logout } from '../../components/auth/logout';
 
 export const LogoutScreen = () => {
 

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { loginUser } from '../../firebase/auth/login-user';
+import { loginUser } from '../../components/auth/loginUser';
 import { useNavigate } from 'react-router-dom';
 
 

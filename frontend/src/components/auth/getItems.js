@@ -1,4 +1,4 @@
-import { collection, getDocs } from 'firebase/firestore/lite';
+import { collection, getDocs } from 'firebase/firestore';
 
 export const getItems = async (db) => {
     const itemsCol = collection(db, 'items');
